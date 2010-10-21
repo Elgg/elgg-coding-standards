@@ -16,19 +16,19 @@ class PHP_CodeSniffer_Standards_Elgg_ElggCodingStandard extends PHP_CodeSniffer_
 	{
 		return array(
 			'Generic/Sniffs/Files/LineEndingsSniff.php',
-			'Elgg/Sniffs/WhiteSpace/DisallowSpaceIndentSniff.php',
+			dirname(__FILE__) . '/Sniffs/WhiteSpace/DisallowSpaceIndentSniff.php',
 			'Generic/Sniffs/PHP/DisallowShortOpenTagSniff.php',
 			'PEAR/Sniffs/Commenting/ClassCommentSniff.php',
 			'PEAR/Sniffs/Commenting/FunctionCommentSniff.php',
 			'PEAR/Sniffs/ControlStructures/ControlSignatureSniff.php',
-			'Elgg/Sniffs/NamingConventions/ValidFunctionNameSniff.php',
+			dirname(__FILE__) . '/Sniffs/NamingConventions/ValidFunctionNameSniff.php',
 			'Generic/Sniffs/NamingConventions/UpperCaseConstantNameSniff.php',
-			'Elgg/Sniffs/Functions/FunctionDeclarationArgumentSpacingSniff.php',
+			dirname(__FILE__) . '/Sniffs/Functions/FunctionDeclarationArgumentSpacingSniff.php',
 			'PEAR/Sniffs/Functions/FunctionCallArgumentSpacingSniff.php',
 			'PEAR/Sniffs/Commenting/InlineCommentSniff.php',
-			'Elgg/Sniffs/Files/LineLengthSniff.php',
+			dirname(__FILE__) . '/Sniffs/Files/LineLengthSniff.php',
 			'Zend/Sniffs/Files/ClosingTagSniff.php',
-			);
+		);
 
 	}
 }
