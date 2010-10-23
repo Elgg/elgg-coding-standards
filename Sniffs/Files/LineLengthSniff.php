@@ -22,7 +22,7 @@ class Elgg_Sniffs_Files_LineLengthSniff extends Generic_Sniffs_Files_LineLengthS
      *
      * @var int
      */
-    protected $absoluteLineLimit = 0;
+    protected $absoluteLineLimit = 150;
 
 }//end class
 
