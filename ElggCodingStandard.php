@@ -19,7 +19,6 @@ class PHP_CodeSniffer_Standards_Elgg_ElggCodingStandard extends PHP_CodeSniffer_
 			dirname(__FILE__) . '/Sniffs/WhiteSpace/DisallowSpaceIndentSniff.php',
 			'Generic/Sniffs/PHP/DisallowShortOpenTagSniff.php',
 			'PEAR/Sniffs/Commenting/ClassCommentSniff.php',
-			'PEAR/Sniffs/Commenting/FunctionCommentSniff.php',
 			'PEAR/Sniffs/ControlStructures/ControlSignatureSniff.php',
 			dirname(__FILE__) . '/Sniffs/NamingConventions/ValidFunctionNameSniff.php',
 			'Generic/Sniffs/NamingConventions/UpperCaseConstantNameSniff.php',
