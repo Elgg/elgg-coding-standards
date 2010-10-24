@@ -24,6 +24,7 @@ class PHP_CodeSniffer_Standards_Elgg_ElggCodingStandard extends PHP_CodeSniffer_
 			dirname(__FILE__) . '/Sniffs/NamingConventions/ValidFunctionNameSniff.php',
 			'Generic/Sniffs/NamingConventions/UpperCaseConstantNameSniff.php',
 			dirname(__FILE__) . '/Sniffs/Functions/FunctionDeclarationArgumentSpacingSniff.php',
+			'Generic/Sniffs/Functions/OpeningFunctionBraceKernighanRitchieSniff.php',
 			'PEAR/Sniffs/Functions/FunctionCallArgumentSpacingSniff.php',
 			'PEAR/Sniffs/Commenting/InlineCommentSniff.php',
 			dirname(__FILE__) . '/Sniffs/Files/LineLengthSniff.php',
