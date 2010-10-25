@@ -368,7 +368,6 @@ class Elgg_Sniffs_Commenting_FunctionCommentSniff implements PHP_CodeSniffer_Sni
 
                 $paramName = ($param->getVarName() !== '') ? $param->getVarName() : '[ UNKNOWN ]';
 
-/*
                 if ($previousParam !== null) {
                     $previousName = ($previousParam->getVarName() !== '') ? $previousParam->getVarName() : 'UNKNOWN';
 
@@ -383,7 +382,7 @@ class Elgg_Sniffs_Commenting_FunctionCommentSniff implements PHP_CodeSniffer_Sni
                         $this->currentFile->addError($error, $errorPos);
                     }
                 }//end if
-*/
+
                 // Make sure the names of the parameter comment matches the
                 // actual parameter.
                 if (isset($realParams[($pos - 1)]) === true) {
