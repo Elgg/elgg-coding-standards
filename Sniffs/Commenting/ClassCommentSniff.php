@@ -55,7 +55,7 @@ class Elgg_Sniffs_Commenting_ClassCommentSniff extends PEAR_Sniffs_Commenting_Cl
                        'see'        => array(
                                         'required'       => false,
                                         'allow_multiple' => true,
-                                        'order_text'     => 'follows @link',
+                                        'order_text'     => 'follows @package',
                                        ),
                        'since'      => array(
                                         'required'       => false,
