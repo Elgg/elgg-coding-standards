@@ -24,6 +24,13 @@ class Elgg_Sniffs_NamingConventions_ValidFunctionNameSniff extends PEAR_Sniffs_N
             return false;
         }
 
+        // Remove the first _ if it exists.  This is allowed
+        // for very low level "private" internal functions.
+        // Only need to check against _ because already looked for __
+        if (preg_match('|^_|', $string) === 1) {
+            $string = substr($string, 1);
+        }
+
         $validName = true;
         $nameBits  = explode('_', $string);
 
@@ -58,8 +65,11 @@ class Elgg_Sniffs_NamingConventions_ValidFunctionNameSniff extends PEAR_Sniffs_N
         if ($functionName === null) {
             return;
         }
-
-        if ($this->isUnderscoreName($functionName) === false) {
+        // disallow __function_name() 
+        if (preg_match('|^__|', $functionName) === 1) {
+            $error = "Function name \"$functionName\" cannot start with '__'.";
+            $phpcsFile->addError($error, $stackPtr);
+        } else if ($this->isUnderscoreName($functionName) === false) {
             $error = "Function name \"$functionName\" is not in underscore format";
             $phpcsFile->addError($error, $stackPtr);
         }
