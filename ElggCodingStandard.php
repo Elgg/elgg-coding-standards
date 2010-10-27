@@ -24,6 +24,7 @@ class PHP_CodeSniffer_Standards_Elgg_ElggCodingStandard extends PHP_CodeSniffer_
 			'PEAR/Sniffs/Functions/FunctionCallArgumentSpacingSniff.php',
 			'PEAR/Sniffs/Commenting/InlineCommentSniff.php',
 			'Zend/Sniffs/Files/ClosingTagSniff.php',
+			'Squiz/Sniffs/WhiteSpace/OperatorSpacingSniff.php',
 		);
 
 	}
