@@ -27,7 +27,6 @@ class PHP_CodeSniffer_Standards_Elgg_ElggCodingStandard extends PHP_CodeSniffer_
 			'Generic/Sniffs/Functions/OpeningFunctionBraceKernighanRitchieSniff.php',
 			'PEAR/Sniffs/Functions/FunctionCallArgumentSpacingSniff.php',
 			'PEAR/Sniffs/Commenting/InlineCommentSniff.php',
-			dirname(__FILE__) . '/Sniffs/Files/LineLengthSniff.php',
 			'Zend/Sniffs/Files/ClosingTagSniff.php',
 		);
 
