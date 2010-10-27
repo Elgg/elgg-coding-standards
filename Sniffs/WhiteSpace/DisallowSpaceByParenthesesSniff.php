@@ -50,14 +50,17 @@ class Elgg_Sniffs_WhiteSpace_DisallowSpaceByParenthesesSniff implements PHP_Code
         $closePtr = $tokens[$stackPtr]['parenthesis_closer'];
         $beforeCloseToken = $tokens[($closePtr -1)];
 
+	$allowedWhitespace = array("\n", "\t");
+
         $errorLocations = array();
 
-        // don't allow a space after the paren, but do allow a new line
-        if ($afterOpenToken['code'] === T_WHITESPACE && $afterOpenToken['content'] !== "\n") {
+        // don't allow a space after the paren, but do allow a new line or tab
+        // only look at the char immediately before
+        if ($afterOpenToken['code'] === T_WHITESPACE && !in_array(substr($afterOpenToken['content'], 1), $allowedWhitespace)) {
             $errorLocations[] = 'after opening';
         }
 
-        if ($beforeCloseToken['code'] === T_WHITESPACE && $afterOpenToken['content'] !== "\n") {
+        if ($beforeCloseToken['code'] === T_WHITESPACE && !in_array(substr($beforeCloseToken['content'], -1), $allowedWhitespace)) {
             $errorLocations[] = 'before closing';
         }
 
