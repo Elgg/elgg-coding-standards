@@ -17,7 +17,6 @@ class PHP_CodeSniffer_Standards_Elgg_ElggCodingStandard extends PHP_CodeSniffer_
 		return array(
 			'Generic/Sniffs/Files/LineEndingsSniff.php',
 			'Generic/Sniffs/PHP/DisallowShortOpenTagSniff.php',
-			'PEAR/Sniffs/Commenting/ClassCommentSniff.php',
 			'PEAR/Sniffs/ControlStructures/ControlSignatureSniff.php',
 			'Generic/Sniffs/ControlStructures/InlineControlStructureSniff.php',
 			'Generic/Sniffs/NamingConventions/UpperCaseConstantNameSniff.php',
