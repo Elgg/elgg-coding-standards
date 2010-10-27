@@ -56,11 +56,11 @@ class Elgg_Sniffs_WhiteSpace_DisallowSpaceByParenthesesSniff implements PHP_Code
 
         // don't allow a space after the paren, but do allow a new line or tab
         // only look at the char immediately before
-        if ($afterOpenToken['code'] === T_WHITESPACE && !in_array(substr($afterOpenToken['content'], 1), $allowedWhitespace)) {
+        if ($afterOpenToken['code'] === T_WHITESPACE && !in_array(substr($afterOpenToken['content'], 0, 1), $allowedWhitespace)) {
             $errorLocations[] = 'after opening';
         }
 
-        if ($beforeCloseToken['code'] === T_WHITESPACE && !in_array(substr($beforeCloseToken['content'], -1), $allowedWhitespace)) {
+        if ($beforeCloseToken['code'] === T_WHITESPACE && !in_array(substr($beforeCloseToken['content'], -1, 1), $allowedWhitespace)) {
             $errorLocations[] = 'before closing';
         }
 
