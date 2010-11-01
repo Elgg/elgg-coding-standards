@@ -325,13 +325,6 @@ class Elgg_Sniffs_Commenting_FunctionCommentSniff implements PHP_CodeSniffer_Sni
                 $this->currentFile->addError($error, $errorPos);
             }
 
-            $lastParm = (count($params) - 1);
-            if (substr_count($params[$lastParm]->getWhitespaceAfter(), $this->currentFile->eolChar) !== 2) {
-                $error    = 'Last parameter comment requires a blank newline after it';
-                $errorPos = ($params[$lastParm]->getLine() + $commentStart);
-                $this->currentFile->addError($error, $errorPos);
-            }
-
             $previousParam      = null;
             $spaceBeforeVar     = 10000;
             $spaceBeforeComment = 10000;
