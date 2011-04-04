@@ -13,7 +13,7 @@ class Elgg_Sniffs_Files_LineLengthSniff extends Generic_Sniffs_Files_LineLengthS
      *
      * @var int
      */
-    protected $lineLimit = 100;
+    public $lineLimit = 100;
 
     /**
      * The limit that the length of a line must not exceed.
@@ -22,7 +22,7 @@ class Elgg_Sniffs_Files_LineLengthSniff extends Generic_Sniffs_Files_LineLengthS
      *
      * @var int
      */
-    protected $absoluteLineLimit = 150;
+    public $absoluteLineLimit = 150;
 
 }//end class
 
