@@ -2,7 +2,7 @@ Elgg coding standards for PHP_CodeSniffer
 ===============================================
 
 This is the set of sniffs is used with [PHP_CodeSniffer](http://pear.php.net/PHP_CodeSniffer).
-
+It requires at least version 1.3.0 of PHP_CodeSniffer.
 
 Installation and Usage
 -----------------------
