@@ -175,6 +175,11 @@ class Elgg_Sniffs_Commenting_FunctionCommentSniff implements PHP_CodeSniffer_Sni
         $comment           = $phpcsFile->getTokensAsString($commentStart, ($commentEnd - $commentStart + 1));
         $this->_methodName = $phpcsFile->getDeclarationName($stackPtr);
 
+        // Elgg addition: skip non-public functions
+        if (strpos($comment, "@access private") !== false) {
+            return;
+        }
+
         try {
             $this->commentParser = new PHP_CodeSniffer_CommentParser_FunctionCommentParser($comment, $phpcsFile);
             $this->commentParser->parse();
