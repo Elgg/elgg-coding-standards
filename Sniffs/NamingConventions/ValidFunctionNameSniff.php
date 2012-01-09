@@ -122,7 +122,8 @@ class Elgg_Sniffs_NamingConventions_ValidFunctionNameSniff extends PEAR_Sniffs_N
             $testMethodName = substr($methodName, 1);
         }
 
-        if (PHP_CodeSniffer::isCamelCaps($testMethodName, false, $isPublic, false) === false) {
+        // Elgg modification: force CodeSniffer to see all methods as public
+        if (PHP_CodeSniffer::isCamelCaps($testMethodName, false, true, false) === false) {
             if ($scopeSpecified === true) {
                 $error = ucfirst($scope)." method name \"$className::$methodName\" is not in underscore and camel caps format";
             } else {
