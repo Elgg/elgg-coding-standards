@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Elgg_Sniffs_PHP_DeprecatedFunctionsSniff
  *
@@ -6,51 +7,49 @@
  * @package   Elgg
  * @author    Mike Hedman
  */
-class Elgg_Sniffs_PHP_DeprecatedFunctionsSniff extends Generic_Sniffs_PHP_ForbiddenFunctionsSniff
-{
+class Elgg_Sniffs_PHP_DeprecatedFunctionsSniff extends Generic_Sniffs_PHP_ForbiddenFunctionsSniff {
 
-    /**
-     * A list of forbidden functions with their alternatives.
-     *
-     * The value is NULL if no alternative exists. IE, the
-     * function should just not be used.
-     *
-     * @var array(string => string|null)
-     */
-    protected $forbiddenFunctions = array(
-        //deprecations from \engine\lib\deprecated-1.7.php
-        'get_entities_from_access_id' => 'Use elgg_get_entities_from_access_id()',
-        'get_entities_from_access_collection' => 'deprecated by elgg_get_entities()',
-        'get_entities_from_annotations' => 'Use elgg_get_entities_from_annotations()',
-        'list_entities_from_annotations' => 'Use elgg_list_entities_from_annotations()',
-        'get_library_files' => 'Use elgg_get_file_list() instead',
-        'elgg_validate_action_url' => 'final',
-        'test_ip' => null,
-        'is_ip_in_array' => null,
-        'get_entities' => ' Use elgg_get_entities().',
-        'delete_entities' => 'This is a dangerous function as it defaults to deleting everything.',
-        'list_registered_entities' => ' Use elgg_list_registered_entities().',
-        'list_entities' => ' Use elgg_list_entities().',
-        'search_for_group' => 'Deprecated by new search plugin.',
-        'search_list_groups_by_name' => 'deprecated by new search plugin',
-        'list_group_search' => 'deprecated by new search plugin',
-        'get_entities_from_metadata' => 'use elgg_get_entities_from_metadata().',
-        'get_entities_from_metadata_multi' => ' Use elgg_get_entities_from_metadata().',
-        'menu_item' => 'deprecated by add_submenu_item',
-        'search_for_object' => 'deprecated by new search plugin',
-        'search_list_objects_by_name' => 'deprecated by new search plugin',
-        'get_entities_from_relationship' => 'Use elgg_get_entities_from_relationship()',
-        'search_for_site' => 'deprecated by new search plugin',
-        'search_for_user' => 'deprecated by new search plugin',
-        'list_user_search' => 'deprecated by new search plugin',
-        'search_list_users_by_name' => 'deprecated by new search plugin',
-        'extend_view' => ' Use elgg_extend_view().',
-        'get_views' => ' Use elgg_get_views().',
-        'make_register_object' => 'Use {@link add_submenu_item()}',
-        'delete_object_entity' => null,
-        'delete_user_entity' => null,
-        
-        //deprecations from \engine\lib\deprecated-1.8.php
+	/**
+	 * A list of forbidden functions with their alternatives.
+	 *
+	 * The value is NULL if no alternative exists. IE, the
+	 * function should just not be used.
+	 *
+	 * @var array(string => string|null)
+	 */
+	protected $forbiddenFunctions = array(
+		//deprecations from \engine\lib\deprecated-1.7.php
+		'get_entities_from_access_id' => 'Use elgg_get_entities_from_access_id()',
+		'get_entities_from_access_collection' => 'deprecated by elgg_get_entities()',
+		'get_entities_from_annotations' => 'Use elgg_get_entities_from_annotations()',
+		'list_entities_from_annotations' => 'Use elgg_list_entities_from_annotations()',
+		'get_library_files' => 'Use elgg_get_file_list() instead',
+		'elgg_validate_action_url' => 'final',
+		'test_ip' => null,
+		'is_ip_in_array' => null,
+		'get_entities' => ' Use elgg_get_entities().',
+		'delete_entities' => 'This is a dangerous function as it defaults to deleting everything.',
+		'list_registered_entities' => ' Use elgg_list_registered_entities().',
+		'list_entities' => ' Use elgg_list_entities().',
+		'search_for_group' => 'Deprecated by new search plugin.',
+		'search_list_groups_by_name' => 'deprecated by new search plugin',
+		'list_group_search' => 'deprecated by new search plugin',
+		'get_entities_from_metadata' => 'use elgg_get_entities_from_metadata().',
+		'get_entities_from_metadata_multi' => ' Use elgg_get_entities_from_metadata().',
+		'menu_item' => 'deprecated by add_submenu_item',
+		'search_for_object' => 'deprecated by new search plugin',
+		'search_list_objects_by_name' => 'deprecated by new search plugin',
+		'get_entities_from_relationship' => 'Use elgg_get_entities_from_relationship()',
+		'search_for_site' => 'deprecated by new search plugin',
+		'search_for_user' => 'deprecated by new search plugin',
+		'list_user_search' => 'deprecated by new search plugin',
+		'search_list_users_by_name' => 'deprecated by new search plugin',
+		'extend_view' => ' Use elgg_extend_view().',
+		'get_views' => ' Use elgg_get_views().',
+		'make_register_object' => 'Use {@link add_submenu_item()}',
+		'delete_object_entity' => null,
+		'delete_user_entity' => null,
+		//deprecations from \engine\lib\deprecated-1.8.php
 		'db_upgrade' => 'Use PHP upgrades for sql changes.',
 		'list_entities_from_access_id' => 'Use elgg_list_entities_from_access_id()',
 		'register_action' => 'Use {@link elgg_register_action()} instead',
@@ -203,6 +202,6 @@ class Elgg_Sniffs_PHP_DeprecatedFunctionsSniff extends Generic_Sniffs_PHP_Forbid
 		'remove_from_river_by_annotation' => 'Use elgg_delete_river()',
 		'remove_from_river_by_id' => 'Use elgg_delete_river()',
 		'default_page_handler' => null
-    );
+	);
 
-}//end class
+}
