@@ -180,6 +180,11 @@ class Elgg_Sniffs_Commenting_FunctionCommentSniff implements PHP_CodeSniffer_Sni
             return;
         }
 
+        // Elgg addition: skip @inheritdoc functions
+        if (stripos($comment, "@inheritdoc") !== false) {
+            return;
+        }
+
         try {
             $this->commentParser = new PHP_CodeSniffer_CommentParser_FunctionCommentParser($comment, $phpcsFile);
             $this->commentParser->parse();
