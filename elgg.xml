@@ -2,6 +2,8 @@
 <ruleset name="Elgg">
 	<description>Elgg Coding Standard.</description>
 
+	<rule ref="/home/cash/github/elgg-coding-standards/Elgg"/>
+
 	<rule ref="Generic.Files.LineEndings"/>
 	<rule ref="Generic.PHP.DisallowShortOpenTag"/>
 	<rule ref="PEAR.ControlStructures.ControlSignature"/>
@@ -21,4 +23,5 @@
 	<rule ref="PEAR.Commenting.InlineComment"/>
 	<rule ref="Zend.Files.ClosingTag"/>
 	<rule ref="Squiz.WhiteSpace.OperatorSpacing"/>
+
 </ruleset>
