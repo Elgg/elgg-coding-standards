@@ -219,7 +219,8 @@ class Elgg_Sniffs_Commenting_FunctionCommentSniff implements PHP_CodeSniffer_Sni
             $newlineBetween = substr_count($between, $phpcsFile->eolChar);
             if ($newlineBetween !== 2) {
                 $error = 'There must be exactly one blank line between descriptions in function comment';
-                $phpcsFile->addError($error, ($commentStart + $newlineCount + 1));
+                // not requiring this for Elgg
+                //$phpcsFile->addError($error, ($commentStart + $newlineCount + 1));
             }
 
             $newlineCount += $newlineBetween;
@@ -235,7 +236,8 @@ class Elgg_Sniffs_Commenting_FunctionCommentSniff implements PHP_CodeSniffer_Sni
                     $newlineCount += (substr_count($long, $phpcsFile->eolChar) - $newlineSpan + 1);
                 }
 
-                $phpcsFile->addError($error, ($commentStart + $newlineCount));
+                // not requiring this for Elgg
+                //$phpcsFile->addError($error, ($commentStart + $newlineCount));
                 $short = rtrim($short, $phpcsFile->eolChar.' ');
             }
         }

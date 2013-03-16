@@ -98,7 +98,7 @@ class Elgg_Sniffs_NamingConventions_ValidFunctionNameSniff extends PEAR_Sniffs_N
 
         // Is this a magic method. IE. is prefixed with "__".
         if (preg_match('|^__|', $methodName) !== 0) {
-            $magicPart = substr($methodName, 2);
+            $magicPart = strtolower(substr($methodName, 2));
             if (in_array($magicPart, $this->magicMethods) === false) {
                  $error = "Method name \"$className::$methodName\" is invalid; only PHP magic methods should be prefixed with a double underscore";
                  $phpcsFile->addError($error, $stackPtr);
