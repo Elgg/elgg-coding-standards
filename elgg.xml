@@ -2,7 +2,7 @@
 <ruleset name="Elgg">
 	<description>Elgg Coding Standard.</description>
 
-	<rule ref="/home/cash/github/elgg-coding-standards/Elgg"/>
+	<rule ref="./Elgg/Sniffs"/>
 
 	<rule ref="Generic.Files.LineEndings"/>
 	<rule ref="Generic.PHP.DisallowShortOpenTag"/>
