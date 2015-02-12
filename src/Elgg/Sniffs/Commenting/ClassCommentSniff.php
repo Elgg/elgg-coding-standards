@@ -18,7 +18,7 @@ class Elgg_Sniffs_Commenting_ClassCommentSniff extends PEAR_Sniffs_Commenting_Cl
                                         'order_text'     => 'precedes @package',
                                        ),
                        'package'    => array(
-                                        'required'       => true,
+                                        'required'       => false,
                                         'allow_multiple' => false,
                                         'order_text'     => 'follows @category',
                                        ),
