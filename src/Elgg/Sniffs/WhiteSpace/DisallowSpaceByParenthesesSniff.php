@@ -50,7 +50,13 @@ class Elgg_Sniffs_WhiteSpace_DisallowSpaceByParenthesesSniff implements PHP_Code
         $closePtr = $tokens[$stackPtr]['parenthesis_closer'];
         $beforeCloseToken = $tokens[($closePtr -1)];
 
-	$allowedWhitespace = array("\n", "\t");
+        // handle auto-conversion to tabs
+        $afterOpenToken['content'] = str_replace('    ', "\t", $afterOpenToken['content']);
+        $afterOpenToken['length'] = strlen($afterOpenToken['content']);
+        $beforeCloseToken['content'] = str_replace('    ', "\t", $beforeCloseToken['content']);
+        $beforeCloseToken['length'] = strlen($beforeCloseToken['content']);
+
+        $allowedWhitespace = array("\n", "\t");
 
         $errorLocations = array();
 
@@ -78,5 +84,3 @@ class Elgg_Sniffs_WhiteSpace_DisallowSpaceByParenthesesSniff implements PHP_Code
 
 
 }//end class
-
-?>
