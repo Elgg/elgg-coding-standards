@@ -8,7 +8,7 @@
 
 	<!-- ELGG STANDARDS -->
 
-	<rule ref="./Elgg/Sniffs"/>
+	<rule ref="./src/Elgg/Sniffs"/>
 
 	<!-- Code MUST use an indent of 4 spaces, and MUST use tabs for indenting. -->
 	<rule ref="Generic.WhiteSpace.ScopeIndent">
