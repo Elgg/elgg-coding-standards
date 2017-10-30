@@ -7,6 +7,8 @@ class Elgg_Sniffs_Commenting_FunctionCommentSniff extends \PEAR_Sniffs_Commentin
 		foreach ($tokens as $index => $token) {
 			if ($token['content'] == '{@inheritdoc}') {
 				return;
+			} elseif ($token['content'] == '{@inheritDoc}') {
+				return;
 			}
 		}
 		return parent::process($phpcsFile, $stackPtr);
