@@ -4,8 +4,14 @@
 
 	<arg name="tab-width" value="4"/>
 	<arg name="warning-severity" value="0"/>
-	<arg name="ignore" value="*/tests/*,*/upgrades/*,*/deprecated*,*/vendor*"/>
-
+	
+	<exclude-pattern>*/deprecated*</exclude-pattern>
+	<exclude-pattern>*/languages/*</exclude-pattern>
+	<exclude-pattern>*/tests/*</exclude-pattern>
+	<exclude-pattern>*/upgrades/*</exclude-pattern>
+	<exclude-pattern>*/vendor/*</exclude-pattern>
+	<exclude-pattern>*/vendors/*</exclude-pattern>
+	
 	<!-- ELGG STANDARDS -->
 
 	<rule ref="./src/Elgg/Sniffs"/>
