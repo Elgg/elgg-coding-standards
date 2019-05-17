@@ -106,6 +106,10 @@
 	<!-- checked in Methods/FunctionClosingBraceSniff -->
 	<rule ref="Squiz.Functions.FunctionDeclaration"/>
 	<rule ref="Squiz.Functions.LowercaseFunctionKeywords"/>
+	
+	<rule ref="Squiz.Scope.MethodScope"/>
+	<rule ref="Squiz.WhiteSpace.ScopeKeywordSpacing"/>
+	<rule ref="PSR2.Methods.MethodDeclaration"/>
 
 	<!-- In the argument list, there MUST NOT be a space before each comma, and there MUST be one space after each comma. -->
 	<rule ref="Squiz.Functions.FunctionDeclarationArgumentSpacing">
