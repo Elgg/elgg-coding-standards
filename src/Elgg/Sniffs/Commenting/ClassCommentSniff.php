@@ -1,6 +1,8 @@
 <?php
 
-class Elgg_Sniffs_Commenting_ClassCommentSniff extends \PEAR_Sniffs_Commenting_ClassCommentSniff {
+namespace Elgg\Sniffs\Commenting;
+
+class ClassCommentSniff extends \PHP_CodeSniffer\Standards\PEAR\Sniffs\Commenting\ClassCommentSniff {
 
 	/**
 	 * Tags in correct order and related info.

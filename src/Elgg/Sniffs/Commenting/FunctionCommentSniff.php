@@ -1,8 +1,12 @@
 <?php
 
-class Elgg_Sniffs_Commenting_FunctionCommentSniff extends \PEAR_Sniffs_Commenting_FunctionCommentSniff {
+namespace Elgg\Sniffs\Commenting;
 
-	public function process(PHP_CodeSniffer_File $phpcsFile, $stackPtr) {
+use PHP_CodeSniffer\Files\File;
+
+class FunctionCommentSniff extends \PHP_CodeSniffer\Standards\PEAR\Sniffs\Commenting\FunctionCommentSniff {
+
+	public function process(File $phpcsFile, $stackPtr) {
 		$tokens = $phpcsFile->getTokens();
 		foreach ($tokens as $index => $token) {
 			if ($token['content'] == '{@inheritdoc}') {
