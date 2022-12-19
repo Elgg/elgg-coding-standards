@@ -73,7 +73,6 @@
 	</rule>
 	<rule ref="Generic.Functions.OpeningFunctionBraceKernighanRitchie"/>
 
-	<rule ref="Generic.NamingConventions.ConstructorName"/>
 	<rule ref="Generic.NamingConventions.UpperCaseConstantName"/>
 
 	<rule ref="Generic.PHP.BacktickOperator"/>
