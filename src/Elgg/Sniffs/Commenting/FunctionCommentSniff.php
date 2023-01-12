@@ -40,14 +40,14 @@ class FunctionCommentSniff extends \PHP_CodeSniffer\Standards\PEAR\Sniffs\Commen
 	}
 	
 	/**
-	 * Determines whether the whole comment is an inheritdoc comment.
+	 * Determines whether the comment contains an inheritdoc comment
 	 *
 	 * @param File $phpcsFile    The file being scanned.
 	 * @param int  $stackPtr     The position of the current token
 	 *                           in the stack passed in $tokens.
 	 * @param int  $commentStart The position in the stack where the comment started.
 	 *
-	 * @return boolean TRUE if the docblock contains only {@inheritdoc} (case-insensitive).
+	 * @return boolean TRUE if the docblock contains {@inheritdoc} (case-insensitive).
 	 * @see \PHP_CodeSniffer\Standards\Squiz\Sniffs\Commenting\FunctionCommentSniff
 	 */
 	protected function checkInheritdoc(File $phpcsFile, $stackPtr, $commentStart) {
@@ -58,18 +58,14 @@ class FunctionCommentSniff extends \PHP_CodeSniffer\Standards\PEAR\Sniffs\Commen
 			T_DOC_COMMENT_WHITESPACE,
 			T_DOC_COMMENT_STAR,
 		];
+		
+		$commentContent = '';
 		for ($i = $commentStart; $i <= $tokens[$commentStart]['comment_closer']; $i++) {
 			if (in_array($tokens[$i]['code'], $allowedTokens) === false) {
-				$trimmedContent = strtolower(trim($tokens[$i]['content']));
-				
-				if ($trimmedContent === '{@inheritdoc}') {
-					return true;
-				}
-				
-				return false;
+				$commentContent .= $tokens[$i]['content'];
 			}
 		}
 		
-		return false;
+		return str_contains(strtolower($commentContent), '{@inheritdoc}');
 	}
 }
