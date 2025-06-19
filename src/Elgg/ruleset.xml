@@ -133,7 +133,6 @@
 	<rule ref="Squiz.Arrays.ArrayBracketSpacing"/>
 
 	<rule ref="Squiz.Classes.ClassFileName"/>
-	<rule ref="Squiz.Classes.DuplicateProperty"/>
 	<rule ref="Squiz.Classes.LowercaseClassKeywords"/>
 	<rule ref="Squiz.Classes.SelfMemberReference"/>
 	<rule ref="Squiz.Classes.ValidClassName"/>
@@ -194,7 +193,6 @@
 	<rule ref="Squiz.WhiteSpace.LogicalOperatorSpacing"/>
 	<rule ref="Squiz.WhiteSpace.MemberVarSpacing"/>
 	<rule ref="Squiz.WhiteSpace.OperatorSpacing"/>
-	<rule ref="Squiz.WhiteSpace.PropertyLabelSpacing"/>
 	<rule ref="Squiz.WhiteSpace.ScopeClosingBrace"/>
 	<rule ref="Squiz.WhiteSpace.ScopeKeywordSpacing"/>
 	<rule ref="Squiz.WhiteSpace.SemicolonSpacing"/>
