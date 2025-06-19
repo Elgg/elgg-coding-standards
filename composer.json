@@ -1,7 +1,6 @@
 {
 	"name": "elgg/sniffs",
 	"description": "Elgg coding standards",
-	"version": "3.0.0-dev",
 	"license": "GPL-2.0-only",
 	"require": {
 		"squizlabs/php_codesniffer": "^3.9.0"
